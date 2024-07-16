@@ -34,10 +34,79 @@
     display: none;
 }
 
+
+
+/* banner  */
+
+.main-container{
+    display:flex;
+
+}
+
+.image{
+    border:  2px solid red;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.content h1{
+    font-size: 4rem;
+}
+
+.content{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.content p{
+    margin-top: 10px;
+}
+.content .btn-primary{
+    margin-top: 20px;
+}
+
+
+/* card section  */
+
+.cards{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
+}
+.populer{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+.card img{
+    width: 100%;
+}
+
+/* last section start footer */
+/*  */
+/* last section end  */
+
+
+
+/* responsive starts here  */
+
 @media screen and (max-width:576px){
+
+    .container{
+        width: 90%;
+        margin: 1rem auto;
+    }
     .bar{
         display:block;
-        font-size: 30px;
+        font-size: 1.6rem;
         color: white;
     }
     
@@ -45,6 +114,37 @@
         display: none;
     }
 
+    .main-container{
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+    .content h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .content p{
+        width: 250px;
+        text-align: center;
+    }
 
+    .populer{
+        grid-template-columns: 1fr;
+    }
 
 }
+@media screen and (min-width:576px) and (max-width:992px){
+    .container{
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .populer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
